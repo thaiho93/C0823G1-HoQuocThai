@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dang ky hoc vien</title>
+</head>
+<style>
+    label {
+        color: blue;
+    }
+</style>
+<body>
+<form>
+    <table style="background: orange">
+        <caption style="background-color: darkcyan">Đăng Ký Học Viên </caption>
+        <tr>
+            <td>
+                <label for="name">Họ Và Tên</label>
+            </td>
+            <td>
+                <input type="text" id="name">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="birth">Ngày sinh</label>
+            </td>
+            <td>
+                <input type="text" id="birth">
+            </td>
+        </tr>
+        <tr style="color: blue">
+            <td class="text">Lớp</td>
+            <td><select name="class">
+                <option disabled="disabled">Chọn Khoá học & Lớp Học</option>
+                <optgroup label="Lớp C">
+                    <option>Lớp C08</option>
+                    <option>Lớp C07</option>
+                    <option>Lớp C06</option>
+                </optgroup>
+                <optgroup label="Lớp D">
+                    <option>Lớp D08</option>
+                    <option>Lớp D07</option>
+                    <option>Lớp D06</option>
+                </optgroup>
+            </select></td>
+        </tr>
+        <tr>
+            <td>
+                <label for="email">Email</label>
+            </td>
+            <td>
+                <input type="text" id="email">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="phone">Số Điện Thoại</label>
+            </td>
+            <td>
+                <input type="text" id="phone">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="adress">Địa chỉ</label>
+            </td>
+            <td>
+                <input type="textarea"  style="height: 50px" id="adress">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Giới Tính</label>
+            </td>
+            <td>
+                <input type="radio" name="gender" id="male"/>
+                <label for="male">Nam</label>
+                <input type="radio" name="gender" id="female"/>
+                <label for="female">Nữ</label>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Đăng Ký">
+                <input type="reset" value="Nhập lại">
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
