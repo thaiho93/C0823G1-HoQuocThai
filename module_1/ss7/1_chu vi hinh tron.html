@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chu vi hình tròn</title>
+</head>
+<body>
+<h4>Nhập bán kính hình tròn</h4>
+<input type="number" id="r">
+<button onclick="sum()">=</button>
+<h4>Chu vi hình tròn</h4>
+<br>
+<p id="result"></p>
+<script>
+    function sum() {
+        a = +document.getElementById("r").value;
+        document.getElementById("result").innerText = a*2*3.14;
+    }
+</script>
+
+</body>
+</html>

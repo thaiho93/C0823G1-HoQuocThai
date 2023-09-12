@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="numberA" />
+<input type="number" id="numberB"/>
+<input type="number" id="numberC">
+<button onclick="sum()">=</button>
+<p id="result"></p>
+
+<script>
+    function sum() {
+        a = +document.getElementById("numberA").value;
+        b = +document.getElementById("numberB").value;
+        c = +document.getElementById("numberC").value
+        document.getElementById("result").innerText = (a + b + c)/3;
+    }
+</script>
+</body>
+</html>

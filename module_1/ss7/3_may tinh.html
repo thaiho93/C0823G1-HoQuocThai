@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính</title>
+</head>
+<body>
+<input type="number" id="num1" placeholder="Nhập số">
+<input type="number" id="num2" placeholder="Nhập số">
+<button onmouseout = "Sum()">Cộng</button>
+<button onclick="Sum()">Trừ</button>
+<button onclick="Sum()">Nhân</button>
+<button onclick="Sum()">Chia</button>
+<h3>Result:</h3>
+<div id="result"></div>
+
+</body>
+</html>
+<script>
+    function Sum() {
+        let number1 = document.getElementById("num1").value;
+        let number2 = document.getElementById("num2").value;
+        let result = Number(number1) + Number(number2);
+    }
+
+    {
+        let number1 = document.getElementById("num1").value;
+        let number2 = document.getElementById("num2").value;
+        let result = Number(number1) - Number(number2);
+    }
+    {
+        let number1 = document.getElementById("num1").value;
+        let number2 = document.getElementById("num2").value;
+        let result = Number(number1) * Number(number2);
+    }
+    {
+        let number1 = document.getElementById("num1").value;
+        let number2 = document.getElementById("num2").value;
+        let result = Number(number1) / Number(number2);
+    }
+    document.getElementById("result").innerHTML = result;
+    }
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi sang USD</title>
+</head>
+<body>
+<table >
+    <tr>
+        <th style="width: 150px"><label for="Amount">Nhập số tiền</label></th>
+        <th style="width: 150px">Tiền của bạn</th>
+        <th style="width: 150px">Tiền muốn đổi</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td><input type="text" id="Amount"; style="width: 150px"></td>
+        <td style="text-align: center">
+            <select id="From">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td style="text-align: center">
+            <select id="To">
+                <option value="VND">VND</option>
+                <option  value="USD">USD</option>
+            </select>
+        </td>
+        <td><button onclick="ChangeMoney()">ĐỔI</button></td>
+    </tr>
+</table>
+<br>
+<p id="Result"></p>
+<script src="tiente.js"></script>
+</body>
+</html>
