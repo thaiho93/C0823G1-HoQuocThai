@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên</title>
+</head>
+<body>
+<h2>So sánh số với 0</h2>
+<input type="number" id="numberA" placeholder="nhập số" style="width: 15%">
+<br> <br>
+<button onclick="kiemTra()">Kết Quả</button>
+<p id="ketQua"></p>
+<script>
+    function kiemTra() {
+        numberA = document.getElementById("numberA").value;
+        if (numberA > 0) {
+            document.getElementById("ketQua").innerText = "lớn hơn 0";
+        }else if(numberA < 0) {
+            document.getElementById("ketQua").innerText = "nhỏ hơn 0";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tuổi học lớp 10</title>
+</head>
+<body>
+<h2>tuổi vào cấp 3</h2>
+<input type="number" id="age" placeholder="Nhập tuổi" style="width:20%">
+<br> <br>
+<button onclick="kiemTra()">Kiểm tra</button>
+<p id="ketqua"></p>
+</body>
+<script>
+    function kiemTra() {
+        age = document.getElementById("age").value;
+        if (age < 15)
+            document.getElementById("ketqua").innerHTML = "Chưa đủ tuổi";
+        else
+            document.getElementById("ketqua").innerHTML = "được đi học cấp 3";
+    }
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm số lớn nhất</title>
+</head>
+<body>
+<h2>Tìm số lớn nhất</h2>
+<input text type="number" id="numberA" placeholder="nhập số A" style="width: 100px">
+<input text type="number" id="numberB" placeholder="nhập số B" style="width: 100px">
+<input text type="number" id="numberC" placeholder="nhập số C" style="width: 100px">
+<br> <br>
+<button onclick="kiemTra()">Kết quả</button>
+<p id="ketQua"></p>
+
+<script>
+    function kiemTra() {
+        numberA = +document.getElementById("numberA").value;
+        numberB = +document.getElementById("numberB").value;
+        numberC = +document.getElementById("numberC").value;
+        if (numberA > numberB && numberA > numberC) {
+            document.getElementById("ketQua").innerText = numberA;
+        } else if (numberB > numberA && numberB> numberC) {
+            document.getElementById("ketQua").innerText = numberB;
+        } else if (numberC > numberB && numberC > numberA) {
+            document.getElementById("ketQua").innerText = numberC;
+        } else if (numberA === numberB && numberB === numberC) {
+            document.getElementById("ketQua").innerText = numberA;
+        }
+    }
+</script>
+</body>
+</html>

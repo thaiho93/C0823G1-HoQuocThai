@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chia hết</title>
+</head>
+<body>
+<h2>Kiểm tra chia hết</h2>
+<input type="number" id="numberA" placeholder="Nhập số" style="width:20%">
+<input type="number" id="numberB" placeholder="Nhập số" style="width:20%">
+<br> <br>
+
+<button onclick="kiemTra()">Kiểm tra</button>
+<p id="ketqua"></p>
+</body>
+<script>
+    function kiemTra() {
+        let numberA = +document.getElementById("numberA").value;
+        let numberB = +document.getElementById("numberB").value;
+        let result = "";
+        let soDu = numberA % numberB
+        if (soDu === 0) {
+            result = "chia hết"
+        } else {
+            result = "ko chia hết"
+        }
+        document.getElementById("ketqua").innerText = result;
+    }
+</script>
+</html>
