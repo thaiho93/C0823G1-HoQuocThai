@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xếp hạng học sinh</title>
+</head>
+<body>
+<h1>Phân loại học sinh học kì I</h1>
+<input text type="number" id="numberA" placeholder="nhập điểm kiểm tra" width="70px">
+<input text type="number" id="numberB" placeholder="nhập điểm thi giữa kì" width="70px">
+<input text type="number" id="numberC" placeholder="nhập điểm thi cuối kì" width="70px">
+<br>
+<button onclick="kiemTra()"> Kiểm tra </button>
+<p id="ketQua"></p>
+<script>
+    function kiemTra() {
+        numberA = +document.getElementById("numberA").value;
+        numberB = +document.getElementById("numberB").value;
+        numberC = +document.getElementById("numberC").value;
+        document.getElementById("ketQua").innerText= (numberA + numberB * 2 + numberC * 3) / 6
+        avg = +(numberA + numberB * 2 + numberC * 3) / 6;
+        let result = "";
+        if (avg >= 80){
+            result = " loại A";
+        } else if (avg >= 60){
+            result = " loại B";
+        } else if (avg >= 45){
+            result = " loại C";
+        } else {
+            result = " loại D";
+        }
+        document.getElementById("ketQua").innerText = avg + result;
+    }
+</script>
+</body>
+</html>

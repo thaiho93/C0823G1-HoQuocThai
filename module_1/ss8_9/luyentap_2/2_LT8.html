@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra tuổi</title>
+</head>
+<body>
+<h3>Kiểm tra tuổi </h3>
+<input type="number" id="numberA" placeholder="nhập tuổi">
+<br> <br>
+<button onclick="ketQua()"> Kiểm Tra</button>
+<p id="result"></p>
+<script>
+    function ketQua() {
+        numberA = parseInt(document.getElementById("numberA").value);
+        let result;
+        if(numberA > 0 && numberA < 120){
+            result = numberA;
+        }else
+            result = "nhập yêu quái";
+        document.getElementById("result").innerText= result + " tuổi";
+    }
+</script>
+</body>
+</html>

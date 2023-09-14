@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích tam giác</title>
+</head>
+<body>
+<h2>Nhập 2 cạnh góc vuông</h2>
+<input text="number" id="numberA" placeholder="nhập chiều dài cạnh 1">
+<input text="number" id="numberB" placeholder="nhập chiều dài cạnh 2">
+<br> <br>
+<button onclick="ketQua()">Kết quả</button>
+<p id="result"></p>
+<script>
+    function ketQua() {
+        let numberA = +document.getElementById("numberA").value;
+        let numberB = +document.getElementById("numberB").value;
+        let result = "";
+        if(numberA >0 && numberB >0){
+            result = (numberA * numberB) / 2;
+        } else{
+            result = "ko hợp lệ";
+        }
+        document.getElementById("result").innerText="diện tích là " + result;
+    }
+</script>
+
+</body>
+</html>

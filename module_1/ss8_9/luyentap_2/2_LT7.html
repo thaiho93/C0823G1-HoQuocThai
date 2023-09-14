@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2</title>
+</head>
+<body>
+<h2> Giải pt bậc 2: ax^2 + bx + c=0 </h2>
+<input text="number" id="numberA" placeholder="nhập a">
+<input text="number" id="numberB" placeholder="nhập b">
+<input text="number" id="numberC" placeholder="nhập c">
+<br> <br>
+<button onclick="ketQua()">Kết quả</button>
+<p id="result"></p>
+<script>
+    function ketQua() {
+        let numberA = parseFloat(document.getElementById("numberA").value);
+        let numberB = parseFloat(document.getElementById("numberB").value);
+        let numberC = parseFloat(document.getElementById("numberC").value);
+        let delta = (numberB * numberB) - (4 * numberC * numberA);
+        if (delta === 0){
+            let x;
+             x = (-numberB) /(2*numberA);
+             document.write("phương trình có 2 nghiệm kép " + x);
+        } else if (delta > 0){
+            let x1 = (- numberB + Math.sqrt(delta))/(2* numberA);
+            let x2 = (- numberB - Math.sqrt(delta))/(2* numberA);
+            document.write("phương trình có 2 nghiệm x1 là " + x1+ " và x2 là " +x2);
+        } else{
+            document.write("phương trình vô nghiệm");
+        }
+    }
+</script>
+</body>
+</html>

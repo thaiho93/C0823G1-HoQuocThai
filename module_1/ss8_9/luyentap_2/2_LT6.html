@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 1</title>
+</head>
+<body>
+<h3>Giải pt bậc 1: ax + b= 0</h3>
+<input text="number" id="numberA" placeholder="nhập a">
+<input text="number" id="numberB" placeholder="nhập b">
+<br> <br>
+<button onclick="ketQua()">Kết quả</button>
+<p id="result"></p>
+<script>
+    function ketQua() {
+        let numberA = +document.getElementById("numberA").value;
+        let numberB = +document.getElementById("numberB").value;
+        let result;
+        if (numberA ==0 && numberB ==0){
+            result = "phương trình có vô số nghiệm";
+        } else if( numberA ==0 && numberB !==0){
+            result = "phương trình vô nghiệm";
+        } else
+            result = -(numberB) / numberA;
+        document.getElementById("result").innerText= result;
+    }
+</script>
+
+</body>
+</html>

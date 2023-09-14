@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cạnh của tam giác</title>
+</head>
+<body>
+<h2>Nhập 3 cạnh của tam giác:</h2>
+<input type="number" id="a" placeholder="nhập cạnh a" width="30%">
+<input type="number" id="b" placeholder="nhập cạnh b" width="30%">
+<input type="number" id="c" placeholder="nhập cạnh c" width="30%">
+<br> <br>
+<button onclick="kiemTra">Kiểm tra</button>
+<p id="result"></p>
+
+<script>
+function kiemTra() {
+    let a = +document.getElementById("a").value;
+    let b = +document.getElementById("b").value;
+    let c = +document.getElementById("c").value;
+    let result;
+    let x = numberA + numberB;
+    let y = numberB + numberC;
+    let z = numberC + numberA;
+    if(a,b,c >0 && x > c ){
+        result = "là 1 tam giác";
+    } else if (a,b,c>0 && y>a) {
+        result = "là 1 tam giác";
+    }
+    document.getElementById("result").innerHTML= "result";
+}
+</script>
+</body>
+</html>

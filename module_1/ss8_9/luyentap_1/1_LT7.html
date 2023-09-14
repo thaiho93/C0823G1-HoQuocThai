@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cước điện thoại</title>
+</head>
+<body>
+<h2>Cước điện thoại tháng này:</h2>
+<p><input type="number" id="numberA" placeholder="Nhập số phút gọi ngoài nước" style="width: 200px"></p>
+<p><input type="number" id="numberB" placeholder="Nhập số phút gọi trong nước" style="width: 200px"></p>
+<br><br>
+<button onclick="kiemTra()">Giá cước (vnd)</button>
+<br>
+<p id="result"></p>
+<script>
+    function kiemTra() {
+        numberA = +document.getElementById("numberA").value;
+        numberB = +document.getElementById("numberB").value;
+        let result = "";
+        if( numberA >=0 && numberB >=0) {
+            result = (numberA * 1500) + (numberB * 4500);
+        } else {
+            result = "ko hợp lệ"
+        }
+        document.getElementById("result").innerText= "gía cước tháng này là " + result +" vnd";
+    }
+</script>
+</body>
+</html>

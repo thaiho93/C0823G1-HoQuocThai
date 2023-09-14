@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sos</title>
+</head>
+<body>
+<script>
+    let a = +prompt("nhap vao a");
+    let b = +prompt("nhap vao b");
+    let c = +prompt("nhap vao c");
+    let delta = b*b - 4*a*c;
+    if ( delta === 0) {
+        let x = -b / 2*a;
+        document.write("Phuong trinh co 2 nghiem: " + x);
+    } else if ( delta > 0){
+        let x1 = (-b - Math.sqrt(delta)) / (2*a);
+        let x2 = (-b + Math.sqrt(delta)) / (2*a);
+        document.write("Phuong trinh co nghiem kep x1:" + x1 +"<br>" +  "x2: " + x2);
+    } else {
+        document.write("Phuong trinh vo nghiem");
+    }
+</script>
+</body>
+</html>

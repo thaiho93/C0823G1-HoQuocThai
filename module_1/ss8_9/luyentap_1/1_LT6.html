@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hoa hồng</title>
+</head>
+<body>
+<h2>Nhập doanh số tháng này:</h2>
+<input type="number" id="numberA" placeholder="Nhập doanh số tháng">
+<br><br>
+<button onclick="hoaHong()"> Hoa Hồng (Vnd)</button>
+<br>
+<p id="result"></p>
+<script>
+    function hoaHong() {
+        let numberA = +document.getElementById("numberA").value;
+        let result = "";
+        if (numberA >= 50000000) {
+            result = numberA * 40 / 100;
+        } else if (numberA >= 25000000) {
+            result = numberA * 25 / 100;
+        } else if (numberA >= 10000000) {
+            result = numberA * 15 / 100;
+        } else {
+            result = numberA / 10;
+        }
+        document.getElementById("result").innerText = "hoa hồng tháng này là: " + result + "vnd";
+    }
+</script>
+</body>
+</html>
