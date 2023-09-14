@@ -10,7 +10,7 @@
 <input type="number" id="b" placeholder="nhập cạnh b" width="30%">
 <input type="number" id="c" placeholder="nhập cạnh c" width="30%">
 <br> <br>
-<button onclick="kiemTra">Kiểm tra</button>
+<button onclick="kiemTra()">Kiểm tra</button>
 <p id="result"></p>
 
 <script>
@@ -19,15 +19,18 @@ function kiemTra() {
     let b = +document.getElementById("b").value;
     let c = +document.getElementById("c").value;
     let result;
-    let x = numberA + numberB;
-    let y = numberB + numberC;
-    let z = numberC + numberA;
-    if(a,b,c >0 && x > c ){
-        result = "là 1 tam giác";
-    } else if (a,b,c>0 && y>a) {
-        result = "là 1 tam giác";
-    }
-    document.getElementById("result").innerHTML= "result";
+    let x = a+ b;
+    let y = b + c;
+    let z = c + a;
+    if (a > 0 && b > 0 && c > 0) {
+        if (x > c && y > a && z > b) {
+            result = "3 cạnh tạo ra đc 1 tam giác";
+        } else {
+            result = "3 cạnh ko tạo ra đc 1 tam giác";
+        }
+    }else
+        result = "nhập sai dữ liệu"
+        document.getElementById("result").innerHTML = result;
 }
 </script>
 </body>

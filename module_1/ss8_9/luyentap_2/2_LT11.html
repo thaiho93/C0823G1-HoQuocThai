@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thuế thu nhập cá nhân</title>
+</head>
+<body>
+<h2> Nhập thu nhập của bạn (theo tháng): </h2>
+<input type="number" id="numberA" placeholder="thu nhập của bạn (nghìn đồng)" style="width: 20%">
+<br> <br>
+<button onclick="kiemTra()">Kiểm Tra</button>
+<p id="result"></p>
+<script>
+    function kiemTra() {
+        let numberA = +document.getElementById("numberA").value;
+        let result;
+        if (numberA <= 5000 && numberA >0 ){
+            result = numberA / 20 ;
+        } else if (numberA <= 10000){
+            result = numberA / 10 +250;
+        } else if (numberA <= 18000){
+            result = (numberA * 15) / 100 + 750;
+        } else if (numberA <= 32000){
+            result = numberA / 5 + 1650;
+        } else if (numberA <= 52000){
+            result = numberA / 4 +3250;
+        } else if (numberA <= 80000){
+            result = numberA * 3/10 +5850;
+        } else if (numberA >80000){
+            result = numberA * 35 / 100 + 9850
+        } else
+            result ="vui lòng nhập số dương"
+        document.getElementById("result").innerHTML= "thuế thu nhập của bạn là " + result + " nghìn vnđ";
+    }
+</script>
+</body>
+</html>
