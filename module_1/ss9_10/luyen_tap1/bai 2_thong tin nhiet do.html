@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thông tin nhiệt độ</title>
+</head>
+<body>
+<script>
+    let input = prompt("nhập số nhiệt độ");
+    while (true) {
+        if (input > 100) {
+            alert("Giảm nhiệt độ xuống");
+            input = prompt("nhập số nhiệt độ");
+        } else if (input < 20) {
+            alert("Tăng nhiệt độ lên");
+            input = prompt("nhập số nhiệt độ");
+        } else {
+            alert("nhiệt độ ổn");
+            break;
+        }
+    }
+</script>
+</body>
+</html>

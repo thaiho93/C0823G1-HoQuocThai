@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>số đầu tiên chia hết cho 5</title>
+</head>
+<body>
+<h2>tìm số đầu tiên chia hết cho 5</h2>
+<script>
+    let a = 0;
+    let b = 1;
+    document.write(a + "</br>");
+    document.write(b + "</br>");
+    for ( let i = 0; i < 18; i++) {
+        let next = a + b;
+        document.write(next +"</br>");
+        a = b;
+        b = next;
+        if (next % 5 ==0){
+            document.write( next + " là số đầu tiên chia hết cho 5");
+            break;
+        }
+    }
+</script>
+
+</body>
+</html>
