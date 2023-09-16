@@ -5,49 +5,32 @@
     <title>số ngày trong tháng</title>
 </head>
 <body>
-<h2>Kiểm tra số ngày trong tháng</h2>
-<input type="number" min="1" max="12" id="month" placeholder="Nhập tháng" style="width:15%">
-<br> <br>
-<button onclick="kiemTra()">Check</button>
-<p id="result"></p>
 </body>
+<button onclick="doanso()">Chơi</button>
 <script>
-    let thang_1 = "1";
-    let thang_2 = "2";
-    let thang_3 = "3";
-    let thang_4 = "4";
-    let thang_5 = "5";
-    let thang_6 = "6";
-    let thang_7 = "7";
-    let thang_8 = "8";
-    let thang_9 = "9";
-    let thang_10 = "10";
-    let thang_11 = "11";
-    let thang_12 = "12";
-
-    function kiemTra() {
-        let month = +document.getElementById("month").value;
-        switch (month) {
-            case thang_1:
-            case thang_3:
-            case thang_5:
-            case thang_7:
-            case thang_8:
-            case thang_10:
-            case thang_12:
-                document.getElementById("result").innerHTML = "Tháng " + month + " có 31 ngày";
+    function doanso() {
+        debugger;
+        let number = +prompt("Số bạn muốn đoán trong khoảng lớn nhất là bao nhiêu?")
+        let number_ran = Math.floor(Math.random() * number);
+        console.log(number_ran);
+        let number_check = +prompt("Nhập số bạn đoán");
+        let count = 0;
+        while (number_check !== number_ran) {
+            count++;
+            if (count == 4) {
+                alert("Bạn hết số lần đoán")
                 break;
-            case thang_4:
-            case thang_6:
-            case thang_9:
-            case thang_11:
-                document.getElementById("result").innerHTML = "Tháng " + month + " có 30 ngày";
-                break;
-            case thang_2:
-                document.getElementById("result").innerHTML = "Tháng " + month + " có 28 hoặc 29 ngày";
-                break;
-            default:
-                document.getElementById("result").innerHTML = "Tháng ko tồn tại";
+            } else if (number_check < number_ran) {
+                alert("Số bạn đoán bé hơn");
+            } else {
+                alert("Số bạn đoán lớn hơn")
+            }
+            number_check = prompt("Nhập số bạn đoán");
+        }
+        if (count == 4) {
+            document.write("Bạn hết số lần đoán")
+        } else {
+            document.write("Bạn đã đoán đúng số. Chúc mừng bạn!")
         }
     }
 </script>

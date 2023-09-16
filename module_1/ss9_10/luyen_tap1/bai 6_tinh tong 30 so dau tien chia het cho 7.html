@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tổng 30 số</title>
+</head>
+<body>
+<h2>Tổng 30 số đầu tiên chia hết cho 7</h2>
+<div id="result"></div>
+<script>
+    let count = 0;
+    let sum = 0;
+    let number = 1;
+    while ( count < 29 ){
+        if (number % 7 === 0){
+            sum += number;
+            count++;
+        }
+        number++;
+    }
+    document.getElementById("result").innerHTML="Tồng 30 số là " + sum;
+</script>
+
+</body>
+</html>
