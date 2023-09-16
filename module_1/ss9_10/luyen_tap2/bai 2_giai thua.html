@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính giai thừa</title>
+</head>
+<body>
+<h2>Tính giai thừa</h2>
+<input type="number" id="numberA" placeholder="Nhập số dương bạn muốn" style="width: 30%">
+<button onclick="ketQua()">Kết quả</button>
+<p id="result"></p>
+
+<script>
+  function ketQua() {
+    let numberA = true;
+    let result;
+    while ( numberA > 0 ){
+        result = numberA * (NumberA++);
+        numberA++;
+    }
+    document.getElementById("result").innerHTML= result;
+  }
+</script>
+
+</body>
+</html>
