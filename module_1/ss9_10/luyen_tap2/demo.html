@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Nhập số tiền, số tháng và lãi suất muốn gửi:</h3>
+<input type="number" id="a" placeholder="nhập số tiền bạn muốn gửi (triệu vnđ)" style="width: 250px">
+<br><br>
+<input type="number" id="b" placeholder="nhập số tháng bạn muốn gửi" style="width: 250px">
+<br><br>
+<input type="number" id="c" placeholder="nhập lãi suất bạn mong muốn (%)" style="width: 250px">
+<br> <br>
+<button onclick="kiemTra()">Kiểm Tra</button>
+<p id="result"></p>
+
+<script>
+    function kiemTra() {
+        let a = +document.getElementById("a").value;
+        let b = +document.getElementById("b").value;
+        let c = +document.getElementById("c").value;
+        let result;
+        let i =0;
+        while (b > 0 && i <=b ) {
+            lai = a * c/100;
+            lai *= (lai + a) *c/100;
+            i++;
+        }
+        document.getElementById("result").innerText= lai;
+    }
+
+
+</script>
+</body>
+</html>

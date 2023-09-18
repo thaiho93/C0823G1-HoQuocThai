@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hình tam giác</title>
+</head>
+<body style="width: 200px; height: 500px" >
+<script>
+    let hinh = ' ';
+    for (let i = 1; i <= 5; i++) {
+        hinh = hinh + "*";
+        document.write(hinh + "</br>");
+    }
+    document.write("</br>")
+    for (let i = 5; i > 0; i--) {
+        for (j = 1; j <= i; j++) {
+            document.write('*')
+        }
+        document.write("</br>");
+    }
+    document.write("</br>")
+    for (i = 5; i > 0; i--) {
+        for (j = 1; j <= 5; j++) {
+            if (j < i) {
+                document.write('&nbsp;&nbsp;')
+            } else {
+                document.write('*')
+            }
+        }
+        document.write("</br>")
+    }
+    document.write("</br>")
+    for (i = 5; i > 0; i--) {
+        for (j = 5; j > 0; j--) {
+            if (j > i) {
+                document.write('&nbsp;&nbsp;')
+            } else {
+                document.write('*')
+            }
+        }
+        document.write("</br>")
+    }
+</script>
+</body>
+</html>

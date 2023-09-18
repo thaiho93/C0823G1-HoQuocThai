@@ -11,7 +11,7 @@
     function tong(){
         let a = 0;
         let b = 1;
-        let sum = 0;
+        let sum = 1;
         for (let i = 1; i <19; i++) {
             let c = a + b;
             sum += c;
@@ -20,8 +20,7 @@
         }
         return sum;
     }
-    let resultElement = document.getElementById("result");
-    resultElement.innerHTML = "Tổng của 20 số đầu tiên trong dãy Fibonacci là: " + tong();
+    document.getElementById("result").innerHTML = "Tổng của 20 số đầu tiên trong dãy Fibonacci là: " + tong();
 </script>
 
 </body>
