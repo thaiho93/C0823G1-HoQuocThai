@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+<button onclick="check()">Bắt đầu</button>
+<script>
+    function check() {
+        let min = +prompt("Số bạn muốn đoán trong khoảng nhỏ nhất là bao nhiêu?")
+        let max = +prompt("Số bạn muốn đoán trong khoảng lớn nhất là bao nhiêu?")
+        let random = Math.round(Math.random() * (max - min) + min);
+        let numberCheck = +prompt("Nhập số bạn đoán");
+        let count = 1;
+        do {
+            if (numberCheck < random) {
+                input = +prompt("số bạn đoán nhỏ hơn, nhập lại");
+                count++;
+            } else if (numberCheck > random) {
+                input = prompt("số bạn đoán lớn hơn. nhập lại");
+                count++;
+            } else {
+                alert("bạn đã đoán đúng");
+                break;
+            }
+        } while (count <= 3)
+    }
+</script>
+</body>
+</html>

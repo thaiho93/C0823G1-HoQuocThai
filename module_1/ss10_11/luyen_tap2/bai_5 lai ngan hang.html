@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Tính lãi ngân hàng</title>
 </head>
 <body>
 <h3>Nhập số tiền, số tháng và lãi suất muốn gửi:</h3>
@@ -20,17 +20,18 @@
         let a = +document.getElementById("a").value;
         let b = +document.getElementById("b").value;
         let c = +document.getElementById("c").value;
-        let result;
-        let i =0;
-        while (b > 0 && i <=b ) {
-            lai = a * c/100;
-            lai *= (lai + a) *c/100;
-            i++;
+        let lai;
+        for (let i = 0; i < b; i++) {
+            if (a > 0 && b > 0 && c > 0) {
+                lai = (a * c / 100);
+                a = a + lai;
+                document.getElementById("result").innerText = "tiền gốc bạn nhận là: " + a + " triệu vnđ";
+            } else {
+                document.write(" vui lòng nhập các giá trị dương");
+                break;
+            }
         }
-        document.getElementById("result").innerText= lai;
     }
-
-
 </script>
 </body>
 </html>
