@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính tổng 30 số</title>
+</head>
+<body>
+<script>
+    let input = +prompt("nhập tổng số bạn muốn đầu tiên chia hết cho 7");
+    let sum = 0;
+    let count = 0;
+    let number = 0;
+    do {
+        if (number % 7 === 0) {
+            sum += number;
+            count++;
+        }
+        number++
+    } while (count < input);
+    document.write(sum);
+</script>
+
+</body>
+</html>
