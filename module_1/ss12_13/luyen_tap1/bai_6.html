@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>check xem trong mảng hay ko?</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let n = +prompt("Nhap so luong phan tu cua mang: ");
+    for(let i = 0; i < n; i++){
+        arr[i] = +prompt("Nhap phan tu thu " + i + ":");
+    }
+    document.write("Mảng ban đầu : [" + arr + "]");
+    arr[n] = +prompt("Nhap vao phan tu V : ");
+    let check = 0;
+    for (let i = 0; i <arr.length-1;i++){
+        if (arr[i] === arr[arr.length-1]){
+            check =1;
+        }
+    }
+    if(check === 1){
+        document.write(", [V] is in the array ");
+    }else{
+        document.write(", [V]  is not in the array");
+    }
+</script>
+</body>
+</html>

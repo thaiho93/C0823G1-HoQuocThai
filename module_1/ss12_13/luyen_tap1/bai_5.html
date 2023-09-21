@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Đếm số lượng nguyên âm </title>
+</head>
+<body>
+<script>
+    // let str = "Hello";
+    // let arr = str.split("");
+    let str = prompt("Type anything u want: ");
+    str = str.toLocaleLowerCase();
+    let count = 0;
+    for ( let i = 0; i < str.length; i++){
+        if ( str[i] === "u" || str[i] === "e" || str[i] === "o" || str[i] === "a" || str[i] === "i" ){
+            count++;
+        }
+    }
+    document.write("Số nguyên âm trong chuỗi '" + str + "' là: "  + count);
+</script>
+</body>
+</html>

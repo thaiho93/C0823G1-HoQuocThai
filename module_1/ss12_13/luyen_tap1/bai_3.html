@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hiển thị số bự nhứt và giá trị trung bình dãy</title>
+</head>
+<body>
+<div id="result"></div>
+<script>
+    let arr = [1, 4, 6, 8, 3, 14, 43, 88, 64, 105];
+    let max = arr[0];
+    let index = 0;
+    let trungBinh = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+            index = i;
+        }
+        trungBinh += arr[i];
+    }
+    document.getElementById("result").innerHTML = "max là: " + max + " ở vị trí thứ " + index + " và trung bình tổng của mảng là : " + trungBinh;
+</script>
+
+</body>
+</html>

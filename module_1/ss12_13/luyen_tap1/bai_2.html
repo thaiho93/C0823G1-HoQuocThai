@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chỉ ra phần tử lớn nhất và vị trí của nó</title>
+</head>
+<body>
+<div id="result"></div>
+<script>
+    let arr = [1, 4, 6, 8, 3, 14, 43, 88, 64, 105];
+    max = arr[0];
+    index = 0;
+    for (let i = 0; i < 10; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+            index++;
+        }
+    }
+    document.write("max là: " + max + " ở vị trí thứ " + index);
+
+</script>
+
+</body>
+</html>

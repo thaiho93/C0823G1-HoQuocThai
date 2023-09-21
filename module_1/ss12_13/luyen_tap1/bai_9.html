@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ghép 2 mảng</title>
+</head>
+<body>
+<script>
+    let arrA = [];
+    let arrB = [];
+    let m = +prompt("Nhap so luong phan tu cua mang A: ");
+    for (let i = 0; i < m; i++) {
+        arrA[i] = +prompt("Nhap phan tu thu " + i + ":");
+    }
+    let n = +prompt("Nhap so luong phan tu cua mang B: ");
+    for (let i = 0; i < n; i++) {
+        arrB[i] = +prompt("Nhap phan tu thu " + i + ":");
+    }
+    // document.write("Mảng A ban đầu : [" + arrA + "]" + "</br>" + " Và Mảng B ban đầu : [" + arrB + "]");
+    let c = [];
+    //Nối mảng b và a thành mảng c
+    for (let i = 0; i < arrA.length; i++) {
+        c[i] = arrA[i];
+    }
+    for (let i = 0; i < arrB.length; i++) {
+        c[arrA.length + i] = arrB[i];
+    }
+    document.write("Mảng c: [" + c + "]");
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nhập 10 phần tử và sắp xếp</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let n = +prompt("Nhap so luong phan tu cua mang: ");
+    for(let i = 0; i < n; i++){
+        arr[i] = +prompt("Nhap phan tu thu " + i + ":");
+    }
+    arr.sort((a, b) => b - a);
+    document.write("Mảng đã sắp xếp : [" + arr + "]");
+</script>
+
+</body>
+</html>
