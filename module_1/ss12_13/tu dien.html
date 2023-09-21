@@ -2,68 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SOS</title>
-    <!-- Thêm CSS để trang trí cho form và button -->
-    <style>
-        label {
-            font-weight: bold;
-        }
-
-        input[type="text"], button {
-            padding: 10px;
-            font-size: 16px;
-            border-radius: 5px;
-            border: none;
-            margin-right: 10px;
-            margin-bottom: 10px;
-        }
-
-        button {
-            background-color: #4CAF50;
-            color: #ffffff;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #3e8e41;
-        }
-
-        p {
-            font-size: 18px;
-            font-weight: bold;
-        }
-    </style>
+    <title>Từ Điển</title>
 </head>
 <body>
-<div class="container">
-    <form>
-        <label for="string">Nhập từ tiếng Anh cần dịch:</label>
-        <input type="text" name="" id="string">
-        <button type="button" onclick="transcript()">Dịch</button>
-    </form>
-    <p id="result"></p>
-</div>
+<p>Nhập từ :</p>
+<input id="input">
+<button onclick="dich()"> Dịch </button>
+<p id="result"></p>
 <script>
-    function transcript(){
-        let eng = ["banana","apple","orange","mango","potato","water melon","lemon","book","pen","car","run","sleep","wake up","hello"];
-        let vie = ["chuối","táo","cam","xoài","khoai tây","dưa hấu","chanh","sách","bút","xe hơi","chạy","ngủ","thức dậy","xin chào"];
-        let string = document.getElementById("string").value.toLowerCase(); // Chuyển từ nhập vào thành chữ thường để xử lý
-        let indexeng = 0;
-        let result="";
-        for (let i = 0; i < eng.length;i++){
-            if (string === eng[i]) {
-                indexeng = i;
-                for (let j = 0; j < vie.length; j++) {
-                    if (indexeng === j) {
-                        result = vie[j];
-                    }
-                }
+    let eng = ["banana", "apple", "orange", "pen", "pencil", "book","mango","potato","water melon","lemon","car","run"];
+    let viet = ["chuối", "táo", "cam", "bút", "bút chì", "sách","xoài","khoai tây","dưa hấu","chanh","xe hơi","chạy"];
+
+    function dich() {
+        let input = document.getElementById('input').value;
+        let check = 0;
+        for (i = 0; i < eng.length; i++) {
+            if (input === eng[i]) {
+                document.getElementById('result').innerHTML = viet[i];
+                check = 1;
+                break;
             }
         }
-        if (result === "") {
-            document.getElementById("result").innerHTML = "Không tìm thấy kết quả";
-        } else {
-            document.getElementById("result").innerHTML = "Từ \"" + string + "\" dịch sang tiếng Việt là \"" + result + "\"";
+        if (check === 0) {
+            document.getElementById('tl').innerHTML = "Không tìm thấy"
         }
     }
 </script>
