@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hàm tính diện tích, chu vi hình tròn</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhập bán kính bạn muốn");
+
+    function dienTichHinhTron(n) {
+        let dienTich = 3.14 * n * n;
+        return dienTich;
+    }
+
+    function chuViHinhTron(n) {
+        let chuVi = 2 * 3.14 * n;
+        return chuVi;
+    }
+    let result1;
+    let result2;
+    result1 = dienTichHinhTron(n);
+    result2 = chuViHinhTron(n);
+    document.write("Diện tích và chu vi của hình tròn là: " + result1 + " và " + result2);
+</script>
+</body>
+</html>

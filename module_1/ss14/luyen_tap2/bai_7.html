@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đổi chỗ 2 số nguyên</title>
+</head>
+<body>
+<script>
+    function doiChoSoNguyen() {
+        let input1 = +prompt("nhập số thứ 1");
+        let input2 = +prompt("nhập số thứ 2");
+        let temp = input1;
+        input1 = input2;
+        input2 = temp;
+
+        return [input1, input2];
+    }
+
+    let result = doiChoSoNguyen();
+    console.log("Số thứ 1 sau khi đổi chỗ: " + result[0]);
+    console.log("Số thứ 2 sau khi đổi chỗ: " + result[1]);
+</script>
+</body>
+</html>
+

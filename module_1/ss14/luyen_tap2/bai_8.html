@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hàm đảo ngược mảng số nguyên</title>
+</head>
+<body>
+<script>
+
+    function daoNguocMang() {
+        let array = [];
+        let soLuong = +prompt("số lượng phần tử của mảng");
+        for (let i = 0; i < soLuong; i++) {
+            array[i] = +prompt("nhập phần tử thứ " + i);
+        }
+        console.log(array);
+        for (let i = array.length -1; i >= 0; i--){
+            document.write(array[i] + ",");
+        }
+    }
+    let result = daoNguocMang();
+</script>
+
+</body>
+</html>

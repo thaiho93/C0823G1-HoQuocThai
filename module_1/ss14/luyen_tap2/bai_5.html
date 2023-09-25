@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm nhập 3 số nguyên</title>
+</head>
+<body>
+<script>
+    let array = [];
+
+    function soNguyenNhoNhat() {
+        for (let i = 0; i < 3; i++) {
+            array[i] = +prompt("nhập số nguyên");
+        }
+            let min = array[0];
+            for (let i = 0; i < 3; i++) {
+                if (min > array[i]) {
+                    min = array[i];
+                }
+            }
+        return min;
+    }
+
+    let result = soNguyenNhoNhat();
+    document.write("Số nguyên nhỏ nhất là: " + result);
+</script>
+
+</body>
+</html>

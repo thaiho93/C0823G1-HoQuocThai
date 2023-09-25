@@ -9,33 +9,25 @@
 <button onclick="tim()"> Kết Quả</button>
 <p id="result"></p>
 <script>
-    let array = [1, 9, 8, 7, 6];
-    let num = +prompt('Nhập 1 số vào đây')
-    let check = -1;
-    for (i = 0; i < array.length; i++) {
-        if (array[i] === num) {
-            check = 0;
-            for (j = i; j < array.length; j++) {
-                array[j] = array[j + 1]
-            }
-            array[(array.length) - 1] = '';
-            console.log(array)
-            document.getElementById('result').innerHTML = array.join('')
+    let arr = [];
+    let n = +prompt("Nhap so luong phan tu cua mang: ");
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt("Nhap phan tu thu " + i + ":");
+    }
+    document.write("Mảng ban đầu : [" + arr + "]");
+    arr[n] = +prompt("Nhap vao phan tu V : ");
+    let count = 0;
+    for (let i = 0; i < arr.length - 1; i++) {
+        if (arr[i] === arr[arr.length - 1]) {
+            count = 1;
         }
     }
-    if (check == -1) {
-        document.getElementById('result').innerText = 'Số bạn nhập không có trong dãy'
+    if (count === 1) {
+        arr[i] = arr [i + 1];
+        arr[i + 1] = arr [i + 2];
+        arr[arr.length - 1] = 0;
     }
-
-    let arr = new Array(10);
-    for (i = 0; i < 10; i++) {
-        arr[i] = prompt('Nhập')
-        if (arr[i] === 5) {
-            arr.splice(i, 1)
-        }
-    }
-    document.write(arr.join(' '))
-
+    document.write(arr);
 </script>
 </body>
 </html>

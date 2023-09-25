@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let size = +prompt("Nhap do dai cua mang");
+    let arr = new Array(size);
+    //   console.log("Mang chua co gia tri: ", arr);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = +prompt(`Nhap phan tu thu ${i}`);
+    }
+    //   console.log("Mang da co gia tri: ", arr);
+    //Dao nguoc mang [1, 2, 3, 4, 5, 6] 0, 1, 2, 3, 4, 5 => arr.length - 1
+    //Cach 1: Tao mang moi => duyet nguoc mang cu => push vao mang moi
+    let newArr = [];
+    let j = 0;
+    for (let i = arr.length - 1; i >= 0; i--) {
+        newArr[j] = arr[i];
+        j++;
+    }
+    //   console.log("Mang sau khi dao nguoc: ", newArr);
+    //Cach 2: Hoan doi vi tri giua phan tu dau va phan tu cuoi
+    let temp;
+    for (let i = 0; i < arr.length / 2; i++) {
+        temp = arr[i];
+        arr[i] = arr[arr.length - 1 - i];
+        arr[arr.length - 1 - i] = temp;
+    }
+    console.log(arr);
+</script>
+</body>
+</html>

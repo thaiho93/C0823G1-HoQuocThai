@@ -8,11 +8,14 @@
 <div id="result"></div>
 <script>
     let arr = [1, 4, 6, 8, 3, 14, 43, 88, 64, 105];
-    for (let i = 0; i < 10; i++){
-        if( arr[i] >= 10 ){
-            document.write(arr[i] + "</br>");
+    let count = 0;
+    for (let i = 0; i < 10; i++) {
+        if (arr[i] >= 10) {
+            count++;
+            // document.write(arr[i] + "</br>");
         }
     }
+    document.write(count + "  số lớn hơn hoặc bằng 10")
 
 </script>
 

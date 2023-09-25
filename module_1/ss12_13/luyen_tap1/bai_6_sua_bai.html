@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let arr = [1, 2, 3, 4, 5];
+    let arr1 = [6, 2, 3, 4, 5, 8, 9, 10];
+    let v = +prompt("Nhap so can tim:");
+
+
+    // Cach 1
+    //   let flag = false;
+    //   for (let i = 0; i < arr.length; i++) {
+    //     if (v === arr[i]) {
+    //       document.writeln("So can tim co ton tai " + v);
+    //       flag = true;
+    //       break;
+    //     }
+    //   }
+    //   // (flag === false)
+    //   if (!flag) {
+    //     document.writeln("Khong ton tai");
+    //   }
+    // Cach 2
+    function checkExists(array, number) {
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] === number) {
+                return true;
+            }
+        }
+        return false;
+    }
+    let result = checkExists(arr1, v);
+    if (result) {
+        document.writeln("So can tim co ton tai " + v);
+    } else {
+        document.writeln("Khong ton tai");
+    }
+    //   document.write("Result: " + result);
+</script>
+</body>
+</html>

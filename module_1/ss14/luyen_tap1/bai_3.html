@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 3</title>
+</head>
+<body>
+<script>
+    // function alertMessage(a,b) {
+    //     if (a > b ){
+    //         alertMessage("nhập sai");
+    //     } else {
+    //         tong = a + b;
+    //         return tong;
+    //     }
+    // }
+    // var a = 10;
+    // var b = 5;
+    // var ketQua = alertMessage(10,5)
+    //
+    // if (ketQua !== undefined) {
+    //     console.log("Tổng của hai tham số là: " + ketQua);
+    // }
+    function kiemTraVaTinhTong(a, b) {
+        if (a > b) {
+            alert("Nhập sai, nhập lại pls");
+        } else {
+            return a + b;
+        }
+    }
+
+    let a = +prompt("nhập số a");
+    let b = +prompt("nhập số b");
+    let result = kiemTraVaTinhTong(a, b);
+
+    if (result !== undefined) {
+        document.write("Tổng của hai tham số là: " + result);
+    }
+</script>
+
+</body>
+</html>

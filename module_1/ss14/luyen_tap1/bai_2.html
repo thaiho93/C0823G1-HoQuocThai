@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let x = +prompt("nhập số")
+    //
+    // function number() {
+    //     x++;
+    //     alert(x)
+    //     // console.log(x)
+    // }
+    // number()
+
+    // Định nghĩa hàm tăngGiatriLen1 nhận một tham số
+    function tangGiatriLen1(number) {
+        // Tăng giá trị số lên 1 và trả lại giá trị mới
+        return number + 1;
+    }
+
+    // Gọi hàm và hiển thị kết quả lên màn hình
+    let x = +prompt("nhập số");
+    let result = tangGiatriLen1(x);
+    document.write("Giá trị ban đầu là: " + x + "<br>");
+    document.write("Giá trị sau khi tăng lên 1 là: " + result);
+</script>
+
+</body>
+</html>

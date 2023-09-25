@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 5</title>
+</head>
+<body>
+<script>
+    let arrA = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let arrB = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+
+    function checkArr(star) {
+        let findStars = false;
+        for (let i = 0; i < arrA.length; i++) {
+            if (star === arrA[i]) {
+                findStars = true;
+                alert("chòm sao tương ứng là: " + arrB[i]);
+            }
+        }
+            if (findStars === false) {
+                alert("ko tìm thấy chòm sao.");
+            }
+    }
+
+    let a = prompt("Nhập vào ngôi sao: ");
+    checkArr(a);
+</script>
+
+</body>
+</html>

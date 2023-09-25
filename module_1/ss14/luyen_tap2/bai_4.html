@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra số</title>
+</head>
+<body>
+<script>
+    function isDigit(character) {
+        // Sử dụng hàm isNaN để kiểm tra xem ký tự có phải là số hay không
+        // isNaN sẽ trả về true nếu ký tự không phải là số và false nếu là số
+        return !isNaN(character);
+    }
+
+    // Kiểm tra hàm
+    let inputCharacter = prompt("Nhập một ký tự: ");
+    let result = isDigit(inputCharacter);
+
+    if (result) {
+        document.write("Ký tự nhập vào là ký tự số.");
+    } else {
+        document.write("Ký tự nhập vào không phải là ký tự số.");
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra kí tự và in ra số lần lặp</title>
+</head>
+<body>
+<!--Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng-->
+<!--không. Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.-->
+<script>
+    let arrayChar = [];
+    let count = 0;
+    let length = +prompt(" nhập số phần tử của mảng ");
+    for (let i = 0; i < length; i++) {
+        arrayChar[i] = prompt(" nhập kí tự vào mảng");
+    }
+
+    function checkCharacters(char) {
+        let count = 0; // Đặt biến count bên trong hàm để tính số lần xuất hiện của ký tự cụ thể
+        let check = false;
+
+        for (let i = 0; i < arrayChar.length; i++) {
+            if (char === arrayChar[i]) {
+                check = true;
+                count++;
+            }
+        }
+
+        if (check === true) {
+            alert("Kí tự có trong mảng và xuất hiện số lần là: " + count);
+        } else {
+            alert("-1");
+        }
+    }
+
+
+    let a = prompt("nhập ký tự bạn muốn kiểm tra");
+    checkCharacters(a);
+</script>
+
+</body>
+</html>
